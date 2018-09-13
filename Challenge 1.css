@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
+body{
+  height: 100%;
+  width: 100%;
+  font-family: 'Titillium', Arial, sans-serif;
+  /*background-color: #D9D9D9;*/
+}
+h1{
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+
+  padding-top: 10px;
+}
+h2{
+
+}
+h3{
+  font-size: 14px;
+  font-weight: lighter;
+  color: #ccc;
+  padding-top: 5px;
+}
+.content{
+  width: 100%;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  /*background-color: #ccc;*/
+
+}
+#header{
+  height: 120px;
+  background-color: #324359;
+  text-align: center;
+  text-transform: uppercase;
+}
+.box{
+  width: 33%;
+  /*height: 140px;*/
+  border-top: 3px solid #FFD67D;
+  float: left;/* als ik flexbox gebruik, kan ik niet op de juiste manier combineren met media queries.*/
+
+  background-color: #fff;
+}
+p,h2,h4{
+  padding-left: 10px;
+  padding-right:10px;
+}
+img{ /*responsive images is best moeilijk te vinden op het internet*/
+    width: auto;
+    height: 300px;
+    padding-left: 10px;
+
+}
+/*.klok{
+  background-image: url("Images/Obelisk.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}*/
+/*
+.cern{
+  background-color: grey;
+}
+.www{
+  background-color: lightblue;
+}
+.http{
+  background-color: red;
+}
+.html{
+  background-color: lightgreen;
+}
+.css{
+background-color: lightyellow;
+}
+.paper{
+  background-color: purple;
+}
+.mobile{
+    background-color: lightgrey;
+}*/
+.clearfix{
+  clear:both;
+}
+/*laptop big*/
+@media screen and (min-width:1024px){
+  .klok{
+    width: 50%
+  }
+  .cern{
+    width: 50%
+  }
+  .www,.css{
+    clear: left;
+  }
+}
+/*laptop small*/
+@media screen and (max-width:1024px){
+  .box{
+    width: 50%
+  }
+  .www, .html{
+    clear: left;
+  }
+}
+/*tablet*/
+@media screen and (max-width:768px){
+  .klok{
+    width:100%;
+  }
+  .cern{
+    width:100%;
+  }
+  .html{
+    width: 100%;
+  }
+  .css{
+    width: 100%;
+  }
+
+}
+/*mobile*/
+@media screen and (max-width:320px){
+  .box{
+    width: 100%;
+  }
+
+}
